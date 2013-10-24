@@ -23,7 +23,8 @@ load_plugin_textdomain( 'wp-geo-distances', false, dirname( plugin_basename( __F
  */
 function wpgeo_distances_load() {
 	if ( class_exists( 'WPGeo' ) ) {
-		include_once( WPGEO_DISTANCES_DIR . 'includes/functions.php' );
+		include_once( WPGEO_DISTANCES_DIR . 'includes/core.php' );
+		include_once( WPGEO_DISTANCES_DIR . 'includes/cache.php' );
 		include_once( WPGEO_DISTANCES_DIR . 'includes/query.php' );
 	}
 }
