@@ -20,8 +20,10 @@ load_plugin_textdomain( 'wp-geo-distances', false, dirname( plugin_basename( __F
 
 /**
  * Load WP Geo Distances
+ *
+ * @since  0.1
  */
-function wpgeo_distances_load() {
+function _wpgeo_distances_load() {
 	if ( class_exists( 'WPGeo' ) ) {
 		include_once( WPGEO_DISTANCES_DIR . 'includes/core.php' );
 		include_once( WPGEO_DISTANCES_DIR . 'includes/cache.php' );
@@ -30,4 +32,4 @@ function wpgeo_distances_load() {
 }
 
 // Init.
-add_action( 'plugins_loaded', 'wpgeo_distances_load' );
+add_action( 'plugins_loaded', '_wpgeo_distances_load' );
